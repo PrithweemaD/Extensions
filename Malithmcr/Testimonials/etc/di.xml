@@ -17,7 +17,7 @@
     </virtualType>
     <virtualType name="Malithmcr\Testimonials\Model\ResourceModel\Testimonial\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
         <arguments>
-            <argument name="mainTable" xsi:type="string">omg_malithmcr_testimonials_testimonial</argument>
+            <argument name="mainTable" xsi:type="string">malithmcr_testimonials_testimonial</argument>
             <argument name="resourceModel" xsi:type="string">Malithmcr\Testimonials\Model\ResourceModel\Testimonial</argument>
         </arguments>
     </virtualType>
