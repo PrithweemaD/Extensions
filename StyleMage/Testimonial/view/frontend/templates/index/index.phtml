@@ -1,0 +1,50 @@
+<?php
+/**
+ * Copyright © 2015 stylemagecommerce. All rights reserved.
+ */
+?>
+<form class="form testimonials"
+      action="<?php /* @escapeNotVerified */ echo $block->getTestimonialSubmitAction(); ?>"
+      id="testimonials-form"
+      method="post"
+      data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>"
+      data-mage-init='{"validation":{}}'
+      enctype="multipart/form-data">
+    <fieldset class="fieldset">
+        <legend class="legend"><span><?php /* @escapeNotVerified */ echo __('Post Your Testimonial') ?></span></legend><br />
+        
+        <div class="field title required">
+            <label class="label" for="title"><span><?php /* @escapeNotVerified */ echo __('Title') ?></span></label>
+            <div class="control">
+                <input name="title" id="title" title="<?php /* @escapeNotVerified */ echo __('Title') ?>" value="" class="input-text" type="text" data-validate="{required:true}"/>
+            </div>
+        </div>
+        <div class="field email required">
+            <label class="label" for="email"><span><?php /* @escapeNotVerified */ echo __('Email') ?></span></label>
+            <div class="control">
+                <input name="email" id="email" title="<?php /* @escapeNotVerified */ echo __('Email') ?>" value="<?php echo $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getUserEmail()) ?>" class="input-text" type="text" data-validate="{required:true}"/>
+            </div>
+        </div>
+         <div class="field image">
+            <label class="label" for="image"><span><?php echo __('Image') ?></span></label>
+            <div class="control">
+                <input name="image" id="image" title="<?php /* @escapeNotVerified */ echo __('Image') ?>" value="" class="input-text" type="file" accept="image/*" />
+            </div>
+        </div>
+        <div class="field content required">
+            <label class="label" for="content"><span><?php /* @escapeNotVerified */ echo __('Write Your Testimonial') ?></span></label>
+            <div class="control">
+                <textarea name="content" id="content" title="<?php /* @escapeNotVerified */ echo __('Write Your Testimonial Here') ?>" class="input-text" cols="5" rows="3" data-validate="{required:true}"></textarea>
+            </div>
+        </div>
+        <?php echo $block->getChildHtml('form.additional.info'); ?>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <input type="hidden" name="hideit" id="hideit" value="" />
+            <button type="submit" title="<?php /* @escapeNotVerified */ echo __('Submit') ?>" class="action submit primary">
+                <span><?php /* @escapeNotVerified */ echo __('Submit Testimonial') ?></span>
+            </button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 StyleMage. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="StyleMage_Testimonial::stylemage_testimonial_index" title="Testimonials" module="StyleMage_Testimonial"  sortOrder="20" dependsOnModule="StyleMage_Testimonial" action="testimonial/testimonial/index" resource="StyleMage_Testimonial::stylemage_testimonial_index"/>
+<!--AddMenu-->
+    </menu>
+</config>

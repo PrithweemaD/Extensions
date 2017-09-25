@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+     <update handle="editor"/>
+    <body>
+	   <referenceContainer name="content">
+            <block class="StyleMage\Testimonial\Block\Adminhtml\Testimonial\Edit" name="testimonial_testimonial_edit"/>
+        </referenceContainer>
+		 <referenceContainer name="left">
+            <block class="StyleMage\Testimonial\Block\Adminhtml\Testimonial\Edit\Tabs" name="testimonial_testimonial_edit_tabs">
+				<block class="StyleMage\Testimonial\Block\Adminhtml\Testimonial\Edit\Tab\Testimonial" name="testimonial_testimonial_edit_tab_testimonial"/>
+				 <action method="addTab">
+                    <argument name="name" xsi:type="string">testimonial_section</argument>
+                    <argument name="block" xsi:type="string">testimonial_testimonial_edit_tab_testimonial</argument>
+                </action>
+				<!--CedAddTab-->
+			</block>
+        </referenceContainer>
+    </body>
+</page>
